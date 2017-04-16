@@ -49,13 +49,15 @@ public class Menu {
 				System.out.println("======================================");
 			} else if (option == 3) {
 				System.out.println("======================================");
+				displayLongestRangeJetInFleet();
 				// listEmployees(currentemployees);
 				// currentemployees = fireEmployees(currentemployees, kb);
 				// listEmployees(currentemployees);
 				System.out.println("======================================");
 			} else if (option == 4) {
 				System.out.println("======================================");
-				// listEmployees(currentemployees);
+				addNewJet();
+				displayJets();
 				// currentemployees = fireEmployees(currentemployees, kb);
 				// listEmployees(currentemployees);
 				System.out.println("======================================");
@@ -125,6 +127,14 @@ public class Menu {
 		}
 	}
 	public void displayLongestRangeJetInFleet() {
+		for (Jet jet : hangar.getCurrentJets()) {
+			
+		    System.out.println(jet.getModelsOfJets());
+		    System.out.println(jet.getRangeInMiles());
+		}
+	}
+	
+	public void addNewJet() {
 		for (Jet jet : hangar.getCurrentJets()) {
 			
 		    System.out.println(jet.getModelsOfJets());

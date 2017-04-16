@@ -1,6 +1,9 @@
 package jets;
 
 import java.util.Arrays;
+import java.util.Collections;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 
 public class Hangar {
 
@@ -72,6 +75,25 @@ public class Hangar {
 			}
 		}
 	}
+	
+	public void listLongRangeJetInFleet(){
+		
+		
+//		double dMax = Collections.max(ourValues.dValue);
+		
+		double longestRange = Collections.max(currentJets::getRangeInMiles)).get()
+		
+		}
+	
+//	function maxVal(arr) {
+//	    var max = arr[0];
+//	    for (var i = 1, iMax = arr.length; i < iMax; i++) {
+//	        if (max.value < arr[i].value) {
+//	            max = arr[i];
+//	        }
+//	    }
+//	    return max;
+//	}
 //	public static void fastestJet(String[] currentJets){
 //	for (int i = 1; i < currentJets.length; i++) {
 //	    if (currentJets.get(i) > max) {
