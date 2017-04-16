@@ -42,16 +42,11 @@ public class Menu {
 			} else if (option == 3) {
 				System.out.println("======================================");
 				displayLongestRangeJetInFleet();
-				// listEmployees(currentemployees);
-				// currentemployees = fireEmployees(currentemployees, kb);
-				// listEmployees(currentemployees);
 				System.out.println("======================================");
 			} else if (option == 4) {
 				System.out.println("======================================");
-				addNewJet(kb);
+				addNewJet();
 				displayJets();
-				// currentemployees = fireEmployees(currentemployees, kb);
-				// listEmployees(currentemployees);
 				System.out.println("======================================");
 			} else if (option == 5) {
 				System.out.println("======================================");
@@ -115,7 +110,6 @@ public class Menu {
 		for (Jet jet : hangar.getCurrentJets()) {
 
 			System.out.println(jet.getModelsOfJets());
-			System.out.println(jet.getSpeedMPH());
 			System.out.println(jet.getMachSpeed());
 		}
 	}
@@ -128,10 +122,20 @@ public class Menu {
 		}
 	}
 
-	public Jet[] addNewJet() {
-
-//			hangar.addJet(jet[i]);
-//			return currentjets;
+	public Jet addNewJet() {
+	
+	System.out.println("Please enter the model of the JET in all CAPS");
+	String modelsOfJets = kb.next();
+	System.out.println("Please enter the speed of the JET in MPH");
+	double speedMPH = kb.nextDouble();
+	System.out.println("Please enter the price of the JET in dollars");
+	double priceInDollars = kb.nextDouble();
+	System.out.println("Please enter the range of the JET in miles");
+	double rangeInMiles = kb.nextDouble();
+	
+	Jet j = new Jet(modelsOfJets, speedMPH, priceInDollars, rangeInMiles);
+	
+	return j;
 		}
 }
 	
