@@ -140,14 +140,3 @@ public class Menu {
 }
 	
 	
-//	currentJets = new Jet[i];
-//	Jet[i]
-//
-//
-//	for (int i = 0; i < currentJets.length; i++) {
-//		if (currentJets[i] == null) {
-//			currentJets[i] = currentJets;
-//			break;
-//		}
-//		currentJets[(currentJets.length) - 1] = currentJets[i];
-

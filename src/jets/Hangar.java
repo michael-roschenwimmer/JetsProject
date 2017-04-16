@@ -76,13 +76,12 @@ public class Hangar {
 
 	public Jet[] addJet(Jet j) {
 
+		Jet templist[] = new Jet[currentJets.length + 1];
 		for (int i = 0; i < currentJets.length; i++) {
-			if (currentJets[i] == null) {
-				currentJets[i] = j;
-				break;
+			if (currentJets[i] != null) {
+				templist[i] = currentJets[i];
 			}
 			currentJets[(currentJets.length) + 1] = j;
-			
 		}
 		return currentJets;
 	}
