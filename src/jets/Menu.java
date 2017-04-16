@@ -28,16 +28,15 @@ public class Menu {
 
 			if (option == 1) {
 				System.out.println("======================================");
-
 				System.out.println("***Current JET FLEET***");
 				displayJets();
 				System.out.println("======================================");
 			} else if (option == 2) {
 				System.out.println("======================================");
 				System.out.println("***Fastest JET in JET FLEET***");
-				displayFastestJetInFleet();
-				// currentemployees = hireEmployees(currentemployees, kb);
-				// listEmployees(currentemployees);
+//				displayFastestJetInFleet();
+				Jet fastest = hangar.listFastestJetInFleet();
+				System.out.println(fastest);
 				System.out.println("======================================");
 			} else if (option == 3) {
 				System.out.println("======================================");

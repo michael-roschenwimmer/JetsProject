@@ -6,16 +6,6 @@ public class Hangar {
 
 	private Jet[] currentJets;
 
-	// Hangar jetHangar = new Hangar();
-
-	public void listJets() {
-
-		for (int i = 0; i < currentJets.length; i++) {
-			if (currentJets[i] != null) {
-				System.out.println(currentJets[i]);
-			}
-		}
-	}
 
 	public void addNewJetInHangar(Jet j) {
 
@@ -29,13 +19,26 @@ public class Hangar {
 
 	
 	public void listLongRangeJetInFleet() {
+			    }
+			
+			
+		
+		
 
-		// double dMax = Collections.max(ourValues.dValue);
+	
 
-		// double longestRange =
-		// Collections.max(currentJets::getRangeInMiles)).get()
+	
+	public Jet listFastestJetInFleet() {
+		Jet fastest = currentJets[0];
+		for (int i = 0; i < currentJets.length; i++) {
+			if(currentJets[i].getSpeedMPH() > fastest.getSpeedMPH()){
+				fastest = currentJets[i];
+			}
+			
+		}
+		return fastest;
 	}
-
+	
 
 	public Hangar(Jet[] currentJets) {
 		super();
@@ -128,3 +131,14 @@ public class Hangar {
 //		// jetHangar.addJet(jetEight);
 //		// jetHangar.addJet(jetNine);
 //		// jetHangar.addJet(jetTen);
+
+// Hangar jetHangar = new Hangar();
+
+//public void listJets() {
+//
+//	for (int i = 0; i < currentJets.length; i++) {
+//		if (currentJets[i] != null) {
+//			System.out.println(currentJets[i]);
+//		}
+//	}
+//}
