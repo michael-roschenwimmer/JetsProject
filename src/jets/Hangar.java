@@ -1,69 +1,12 @@
 package jets;
 
 import java.util.Arrays;
-import java.util.Collections;
-
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 
 public class Hangar {
 
 	private Jet[] currentJets;
 
 	// Hangar jetHangar = new Hangar();
-
-	public void defaultJets(Jet[] currentJets) {
-
-		// Jet jetOne = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[0] = jetOne;
-		//
-		// Jet jetTwo = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[1] = jetTwo;
-		//
-		// Jet jetThree = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[2] = jetThree;
-		//
-		// Jet jetFour = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[3] = jetFour;
-		//
-		// Jet jetFive = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[4] = jetFive;
-		//
-		// Jet jetSix = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[5] = jetSix;
-		//
-		// Jet jetSeven = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[6] = jetSeven;
-		//
-		// Jet jetEight = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[7] = jetEight;
-		//
-		// Jet jetNine = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[8] = jetNine;
-		//
-		// Jet jetTen = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
-		// 1_700);
-		// currentJets[9] = jetTen;
-		//
-		// jetHangar.addJet(jetOne);
-		// jetHangar.addJet(jetTwo);
-		// jetHangar.addJet(jetThree);
-		// jetHangar.addJet(jetFour);
-		// jetHangar.addJet(jetFive);
-		// jetHangar.addJet(jetSix);
-		// jetHangar.addJet(jetSeven);
-		// jetHangar.addJet(jetEight);
-		// jetHangar.addJet(jetNine);
-		// jetHangar.addJet(jetTen);
-	}
 
 	public void listJets() {
 
@@ -74,43 +17,27 @@ public class Hangar {
 		}
 	}
 
-	public Jet[] addJet(Jet j) {
+	public void addNewJetInHangar(Jet j) {
 
 		Jet templist[] = new Jet[currentJets.length + 1];
 		for (int i = 0; i < currentJets.length; i++) {
-			if (currentJets[i] != null) {
 				templist[i] = currentJets[i];
-			}
-			currentJets[(currentJets.length) + 1] = j;
+			
+			templist[(currentJets.length) - 1] = j;
+			currentJets[i] = templist[i];
 		}
-		return currentJets;
+		
 	}
 
+	
 	public void listLongRangeJetInFleet() {
 
 		// double dMax = Collections.max(ourValues.dValue);
 
 		// double longestRange =
 		// Collections.max(currentJets::getRangeInMiles)).get()
-		//
 	}
 
-	// function maxVal(arr) {
-	// var max = arr[0];
-	// for (var i = 1, iMax = arr.length; i < iMax; i++) {
-	// if (max.value < arr[i].value) {
-	// max = arr[i];
-	// }
-	// }
-	// return max;
-	// }
-	// public static void fastestJet(String[] currentJets){
-	// for (int i = 1; i < currentJets.length; i++) {
-	// if (currentJets.get(i) > max) {
-	// max = currentJets.get(i);
-	// }
-	// }
-	// }
 
 	public Hangar(Jet[] currentJets) {
 		super();
@@ -142,15 +69,64 @@ public class Hangar {
 
 }
 
-// Try to have an array of 100 jets or so
 
-// Jet("F-16 FIGHTING FALCON", 1_200.50, 1_750_000, 1_700)
-//
 
-// SomeClass[] array = new SomeClass[100];
+
+
+
+
+
+
+
+//public void defaultJets(Jet[] currentJets) {
 //
-// for (int i = 0; i < 100; i++) {
-// SomeClass someObject = new SomeClass();
-// // set properties
-// array[i] = someObject;
-// }
+//		// Jet jetOne = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[0] = jetOne;
+//		//
+//		// Jet jetTwo = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[1] = jetTwo;
+//		//
+//		// Jet jetThree = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[2] = jetThree;
+//		//
+//		// Jet jetFour = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[3] = jetFour;
+//		//
+//		// Jet jetFive = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[4] = jetFive;
+//		//
+//		// Jet jetSix = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[5] = jetSix;
+//		//
+//		// Jet jetSeven = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[6] = jetSeven;
+//		//
+//		// Jet jetEight = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[7] = jetEight;
+//		//
+//		// Jet jetNine = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[8] = jetNine;
+//		//
+//		// Jet jetTen = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000,
+//		// 1_700);
+//		// currentJets[9] = jetTen;
+//		//
+//		// jetHangar.addJet(jetOne);
+//		// jetHangar.addJet(jetTwo);
+//		// jetHangar.addJet(jetThree);
+//		// jetHangar.addJet(jetFour);
+//		// jetHangar.addJet(jetFive);
+//		// jetHangar.addJet(jetSix);
+//		// jetHangar.addJet(jetSeven);
+//		// jetHangar.addJet(jetEight);
+//		// jetHangar.addJet(jetNine);
+//		// jetHangar.addJet(jetTen);

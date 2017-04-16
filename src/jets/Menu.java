@@ -100,7 +100,6 @@ public class Menu {
 
 	public void displayJets() {
 		for (Jet jet : hangar.getCurrentJets()) {
-
 			counter = counter++;
 			System.out.println(counter++ + ": " + jet.getModelsOfJets());
 		}
@@ -122,7 +121,7 @@ public class Menu {
 		}
 	}
 
-	public Jet addNewJet() {
+	public void addNewJet() {
 	
 	System.out.println("Please enter the model of the JET in all CAPS");
 	String modelsOfJets = kb.next();
@@ -135,7 +134,7 @@ public class Menu {
 	
 	Jet j = new Jet(modelsOfJets, speedMPH, priceInDollars, rangeInMiles);
 	
-	return j;
+	hangar.addNewJetInHangar(j);
 		}
 }
 	
