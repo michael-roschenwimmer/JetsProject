@@ -68,6 +68,7 @@ public class Hangar {
 	}
 	
 	public void addJet(Jet jet) {
+		
 		for (int i = 0; i < currentJets.length; i++) {
 			if (currentJets[i] == null) {
 				currentJets[i] = jet;
@@ -81,8 +82,8 @@ public class Hangar {
 		
 //		double dMax = Collections.max(ourValues.dValue);
 		
-		double longestRange = Collections.max(currentJets::getRangeInMiles)).get()
-		
+//		double longestRange = Collections.max(currentJets::getRangeInMiles)).get()
+//		
 		}
 	
 //	function maxVal(arr) {

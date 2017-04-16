@@ -6,13 +6,12 @@ public class Menu {
 
 	Hangar hangar;
 	static int counter = 0;
+	static Scanner kb = new Scanner(System.in);
 
 	public void startUp() {
 		Jet[] defaultList = createDefaultListOfJets();
 		hangar = new Hangar(defaultList);
-		// jetHangar.defaultJets(currentJets);
 
-		Scanner kb = new Scanner(System.in);
 		while (true) {
 			System.out.println("***Welcome to the JET FLEET***");
 			System.out.println("Please choose from the options below:");
@@ -29,16 +28,9 @@ public class Menu {
 
 			if (option == 1) {
 				System.out.println("======================================");
-				
+
 				System.out.println("***Current JET FLEET***");
 				displayJets();
-				// jetHangar.getCurrentJets(currentJets);
-				// System.out.println(currentJets);
-				
-				// for(Student student: students) {
-				// System.out.println(student); // Will invoke overrided
-				// `toString()` method
-
 				System.out.println("======================================");
 			} else if (option == 2) {
 				System.out.println("======================================");
@@ -56,7 +48,7 @@ public class Menu {
 				System.out.println("======================================");
 			} else if (option == 4) {
 				System.out.println("======================================");
-				addNewJet();
+				addNewJet(kb);
 				displayJets();
 				// currentemployees = fireEmployees(currentemployees, kb);
 				// listEmployees(currentemployees);
@@ -71,6 +63,7 @@ public class Menu {
 		kb.close();
 	}
 
+	
 	public Jet[] createDefaultListOfJets() {
 		Jet[] currentJets = new Jet[11];
 		Jet jetOne = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
@@ -112,33 +105,45 @@ public class Menu {
 
 	public void displayJets() {
 		for (Jet jet : hangar.getCurrentJets()) {
-			
+
 			counter = counter++;
-		    System.out.println(counter++ + ": " + jet.getModelsOfJets());
+			System.out.println(counter++ + ": " + jet.getModelsOfJets());
 		}
 	}
 
 	public void displayFastestJetInFleet() {
 		for (Jet jet : hangar.getCurrentJets()) {
-			
+
 			System.out.println(jet.getModelsOfJets());
-		    System.out.println(jet.getSpeedMPH());
-		    System.out.println(jet.getMachSpeed());
+			System.out.println(jet.getSpeedMPH());
+			System.out.println(jet.getMachSpeed());
 		}
 	}
+
 	public void displayLongestRangeJetInFleet() {
 		for (Jet jet : hangar.getCurrentJets()) {
-			
-		    System.out.println(jet.getModelsOfJets());
-		    System.out.println(jet.getRangeInMiles());
+
+			System.out.println(jet.getModelsOfJets());
+			System.out.println(jet.getRangeInMiles());
 		}
 	}
-	
-	public void addNewJet() {
-		for (Jet jet : hangar.getCurrentJets()) {
-			
-		    System.out.println(jet.getModelsOfJets());
-		    System.out.println(jet.getRangeInMiles());
+
+	public Jet[] addNewJet() {
+
+//			hangar.addJet(jet[i]);
+//			return currentjets;
 		}
-	}
 }
+	
+	
+//	currentJets = new Jet[i];
+//	Jet[i]
+//
+//
+//	for (int i = 0; i < currentJets.length; i++) {
+//		if (currentJets[i] == null) {
+//			currentJets[i] = currentJets;
+//			break;
+//		}
+//		currentJets[(currentJets.length) - 1] = currentJets[i];
+
