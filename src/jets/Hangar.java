@@ -21,12 +21,10 @@ public class Hangar {
 
 		Jet templist[] = new Jet[currentJets.length + 1];
 		for (int i = 0; i < currentJets.length; i++) {
-				templist[i] = currentJets[i];
-			
-			templist[(currentJets.length) - 1] = j;
-			currentJets[i] = templist[i];
+				templist[i] = currentJets[i];			
 		}
-		
+		templist[templist.length - 1] = j;
+		currentJets = templist;
 	}
 
 	

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Menu {
 
 	Hangar hangar;
-	static int counter = 0;
+	static int counter = 1;
 	static Scanner kb = new Scanner(System.in);
 
 	public void startUp() {
@@ -103,6 +103,7 @@ public class Menu {
 			counter = counter++;
 			System.out.println(counter++ + ": " + jet.getModelsOfJets());
 		}
+		counter = 1;
 	}
 
 	public void displayFastestJetInFleet() {
