@@ -119,7 +119,16 @@ public class Menu {
 	public void displayFastestJetInFleet() {
 		for (Jet jet : hangar.getCurrentJets()) {
 			
+			System.out.println(jet.getModelsOfJets());
+		    System.out.println(jet.getSpeedMPH());
+		    System.out.println(jet.getMachSpeed());
+		}
+	}
+	public void displayLongestRangeJetInFleet() {
+		for (Jet jet : hangar.getCurrentJets()) {
+			
 		    System.out.println(jet.getModelsOfJets());
+		    System.out.println(jet.getRangeInMiles());
 		}
 	}
 }
