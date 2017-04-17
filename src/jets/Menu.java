@@ -40,7 +40,8 @@ public class Menu {
 				System.out.println("======================================");
 			} else if (option == 3) {
 				System.out.println("======================================");
-				displayLongestRangeJetInFleet();
+				Jet longestRangeJet = hangar.listLongRangeJetInFleet();
+				System.out.println(longestRangeJet);
 				System.out.println("======================================");
 			} else if (option == 4) {
 				System.out.println("======================================");
@@ -100,7 +101,7 @@ public class Menu {
 	public void displayJets() {
 		for (Jet jet : hangar.getCurrentJets()) {
 			counter = counter++;
-			System.out.println(counter++ + ": " + jet.getModelsOfJets());
+			System.out.println(counter++ + ": JET Type: " + jet.getModelsOfJets());
 		}
 		counter = 1;
 	}

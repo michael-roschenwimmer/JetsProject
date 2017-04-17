@@ -31,7 +31,7 @@ public class Jet {
 		super();
 		this.modelsOfJets = modelsOfJets;
 		this.speedMPH = speedMPH;
-		this.machSpeed = machSpeed;
+		this.machSpeed = Math.round(speedMPH / 760.5583392985);;
 		this.priceInDollars = priceInDollars;
 		this.rangeInMiles = rangeInMiles;
 	}
@@ -57,7 +57,7 @@ public class Jet {
 	}
 
 	public void setMachSpeed(double machSpeed) {
-		this.machSpeed = machSpeed;
+		this.machSpeed = Math.round(speedMPH / 760.5583392985);
 	}
 
 	public double getPriceInDollars() {
@@ -79,17 +79,15 @@ public class Jet {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Jet [modelsOfJets=");
+		builder.append("Jet Type: ");
 		builder.append(modelsOfJets);
-		builder.append(", speedMPH=");
-		builder.append(speedMPH);
-		builder.append(", machSpeed=");
-		builder.append(machSpeed);
-		builder.append(", priceInDollars=");
+		builder.append(", Mach Speed: ");
+		builder.append(machSpeed = (Math.round((speedMPH / 760.5583392985))));
+		builder.append(", Price in Dollars: ");
 		builder.append(priceInDollars);
-		builder.append(", rangeInMiles=");
+		builder.append(", Range in Miles: ");
 		builder.append(rangeInMiles);
-		builder.append("]");
+		builder.append("");
 		return builder.toString();
 	}
 	
