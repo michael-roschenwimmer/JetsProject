@@ -57,7 +57,7 @@ public class Jet {
 	}
 
 	public void setMachSpeed(double machSpeed) {
-		this.machSpeed = Math.round(speedMPH / 760.5583392985);
+		this.machSpeed = machSpeed;
 	}
 
 	public double getPriceInDollars() {

@@ -14,15 +14,17 @@ public class Menu {
 
 		while (true) {
 			System.out.println("***Welcome to the JET FLEET***");
-			System.out.println("Please choose from the options below:");
+			System.out.println("**********************************");
+			System.out.println();
+			System.out.println("Please choose and enter one of the options below:");
 			System.out.println("1. List of current jets in the FLEET");
 			System.out.println("2. View the fastest jet in the FLEET");
 			System.out.println("3. View the longest range jet in the FLEET");
 			System.out.println("4. Add a new jet to the FLEET");
 			System.out.println("5. Quit");
+			System.out.println();
 			System.out.println("**********************************");
 			System.out.println("**********************************");
-			System.out.println("Enter your option here: ");
 
 			int option = kb.nextInt(); // Choose between all 5 options
 
