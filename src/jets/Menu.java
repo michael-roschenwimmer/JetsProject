@@ -17,10 +17,10 @@ public class Menu {
 			System.out.println("**********************************");
 			System.out.println();
 			System.out.println("Please choose and enter one of the options below:");
-			System.out.println("1. List of current jets in the FLEET");
-			System.out.println("2. View the fastest jet in the FLEET");
-			System.out.println("3. View the longest range jet in the FLEET");
-			System.out.println("4. Add a new jet to the FLEET");
+			System.out.println("1. List of current JETS in the FLEET");
+			System.out.println("2. View the fastest JET in the FLEET");
+			System.out.println("3. View the longest range JET in the FLEET");
+			System.out.println("4. Add a new JET to the FLEET");
 			System.out.println("5. Quit");
 			System.out.println();
 			System.out.println("**********************************");
@@ -41,6 +41,7 @@ public class Menu {
 				System.out.println("======================================");
 			} else if (option == 3) {
 				System.out.println("======================================");
+				System.out.println("***Longest range JET in JET FLEET***");
 				Jet longestRangeJet = hangar.listLongRangeJetInFleet();
 				System.out.println(longestRangeJet);
 				System.out.println("======================================");
