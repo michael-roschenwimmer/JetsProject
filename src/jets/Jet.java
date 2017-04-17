@@ -10,7 +10,7 @@ public class Jet {
 	private String modelsOfJets;
 	
 	private double speedMPH; // display in Mach speed through Display Class
-	private double machSpeed = Math.round(speedMPH / 760.5583392985); // Mach 1 is MPH/Speed of Sound, Mach 2 is double the speed of sound, etc
+	private double machSpeed; // Mach 1 is MPH/Speed of Sound, Mach 2 is double the speed of sound, etc
 																		
 	private double priceInDollars;
 	private double rangeInMiles;
@@ -31,7 +31,7 @@ public class Jet {
 		super();
 		this.modelsOfJets = modelsOfJets;
 		this.speedMPH = speedMPH;
-		this.machSpeed = Math.round(speedMPH / 760.5583392985);;
+		this.machSpeed = Math.round(speedMPH / 760.5583392985);
 		this.priceInDollars = priceInDollars;
 		this.rangeInMiles = rangeInMiles;
 	}
