@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Menu {
 
-	Hangar hangar;
-	static int counter = 1;
-	static Scanner kb = new Scanner(System.in);
+	Hangar hangar;  // declared hangar object
+	static int counter = 1;  // counter for the display list
+	static Scanner kb = new Scanner(System.in);  // scanner for user input
 
-	public void startUp() {
-		Jet[] defaultList = createDefaultListOfJets();
-		hangar = new Hangar(defaultList);
+	public void startUp() {  // method that runs the whole program
+		Jet[] defaultList = createDefaultListOfJets();  
+		hangar = new Hangar(defaultList); // hangar object instantiated with new Jet array placed inside
 
-		while (true) {
+		while (true) {  // while loop instead of a switch... I don't like switches for some reason
 			System.out.println("***Welcome to the JET FLEET***");
 			System.out.println("**********************************");
 			System.out.println();
@@ -36,7 +36,6 @@ public class Menu {
 			} else if (option == 2) {
 				System.out.println("======================================");
 				System.out.println("***Fastest JET in JET FLEET***");
-//				displayFastestJetInFleet();
 				Jet fastest = hangar.listFastestJetInFleet();
 				System.out.println(fastest);
 				System.out.println("======================================");
@@ -59,41 +58,40 @@ public class Menu {
 		}
 		kb.close();
 	}
-
 	
-	public Jet[] createDefaultListOfJets() {
+	public Jet[] createDefaultListOfJets() {  // pre-stored jets
 		Jet[] currentJets = new Jet[11];
 		Jet jetOne = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
 		currentJets[0] = jetOne;
 
-		Jet jetTwo = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetTwo = new Jet("F-4 PHANTOM", 1_600, 2, 1_750_000, 1_700);
 		currentJets[1] = jetTwo;
 
-		Jet jetThree = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetThree = new Jet("F-14 TOMCAT", 1_600, 2, 1_750_000, 1_700);
 		currentJets[2] = jetThree;
 
-		Jet jetFour = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetFour = new Jet("A-10 THUNDERBOLT (WARTHOG)", 1_600, 2, 1_750_000, 1_700);
 		currentJets[3] = jetFour;
 
-		Jet jetFive = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetFive = new Jet("F-18 HORNET", 1_600, 2, 1_750_000, 1_700);
 		currentJets[4] = jetFive;
 
-		Jet jetSix = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetSix = new Jet("F-117 NIGHTHAWK", 1_600, 2, 1_750_000, 1_700);
 		currentJets[5] = jetSix;
 
-		Jet jetSeven = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetSeven = new Jet("F-15 STRIKE EAGLE", 1_600, 2, 1_750_000, 1_700);
 		currentJets[6] = jetSeven;
 
-		Jet jetEight = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetEight = new Jet("F-35 LIGHTNING", 1_600, 2, 1_750_000, 1_700);
 		currentJets[7] = jetEight;
 
-		Jet jetNine = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetNine = new Jet("F-22 RAPTOR", 1_600, 2, 1_750_000, 1_700);
 		currentJets[8] = jetNine;
 
-		Jet jetTen = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetTen = new Jet("F-35 LIGHTNING", 1_600, 2, 1_750_000, 1_700);
 		currentJets[9] = jetTen;
 
-		Jet jetEleven = new Jet("F-16 FIGHTING FALCON", 1_600, 2, 1_750_000, 1_700);
+		Jet jetEleven = new Jet("A-10 THUNDERBOLT (WARTHOG)", 1_600, 2, 1_750_000, 1_700);
 		currentJets[10] = jetEleven;
 
 		return currentJets;
@@ -101,14 +99,14 @@ public class Menu {
 	}
 
 	public void displayJets() {
-		for (Jet jet : hangar.getCurrentJets()) {
+		for (Jet jet : hangar.getCurrentJets()) { //1. List of current jets in the FLEET
 			counter = counter++;
 			System.out.println(counter++ + ": JET Type: " + jet.getModelsOfJets());
 		}
 		counter = 1;
 	}
 
-	public void displayFastestJetInFleet() {
+	public void displayFastestJetInFleet() { //2. View the fastest jet in the FLEET
 		for (Jet jet : hangar.getCurrentJets()) {
 
 			System.out.println(jet.getModelsOfJets());
@@ -116,7 +114,7 @@ public class Menu {
 		}
 	}
 
-	public void displayLongestRangeJetInFleet() {
+	public void displayLongestRangeJetInFleet() {  //3. View the longest range jet in the FLEET
 		for (Jet jet : hangar.getCurrentJets()) {
 
 			System.out.println(jet.getModelsOfJets());
@@ -124,20 +122,20 @@ public class Menu {
 		}
 	}
 
-	public void addNewJet() {
+	public void addNewJet() {  // 4. Add a new jet to the FLEET ---user adds custom jet   
 	
-	System.out.println("Please enter the model of the JET in all CAPS");
+	System.out.println("Please enter the model of the JET in all CAPS:");
 	String modelsOfJets = kb.next();
-	System.out.println("Please enter the speed of the JET in MPH");
+	System.out.println("Please enter the speed of the JET in miles per hour (MPH):");
 	double speedMPH = kb.nextDouble();
-	System.out.println("Please enter the price of the JET in dollars");
+	System.out.println("Please enter the price of the JET in dollars:");
 	double priceInDollars = kb.nextDouble();
-	System.out.println("Please enter the range of the JET in miles");
+	System.out.println("Please enter the range of the JET in miles:");
 	double rangeInMiles = kb.nextDouble();
 	
 	Jet j = new Jet(modelsOfJets, speedMPH, priceInDollars, rangeInMiles);
 	
-	hangar.addNewJetInHangar(j);
+	hangar.addNewJetInHangar(j);  // adds the jet to the hangar object (that has the jet array)
 		}
 }
 	
